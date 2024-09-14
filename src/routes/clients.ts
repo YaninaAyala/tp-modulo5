@@ -9,11 +9,11 @@ clientsRouter.get("/",  (req: Request, res: Response, next: NextFunction) => {
 clientsRouter.post("/", (req: Request, res: Response, next: NextFunction) => {
     ClientsController.create(req, res, next);
   })
-clientsRouter.patch("/", (req: Request, res: Response, next: NextFunction) => {
+clientsRouter.patch("/:id", (req: Request, res: Response, next: NextFunction) => {
     ClientsController.update(req, res, next);
   })
-clientsRouter.delete("/", (req: Request, res: Response, next: NextFunction) => {
-    ClientsController.deleteClients(req, res, next);
+clientsRouter.delete("/:id", (req: Request, res: Response, next: NextFunction) => {
+    ClientsController.deleteClient(req, res, next);
   })
 
 export default clientsRouter
