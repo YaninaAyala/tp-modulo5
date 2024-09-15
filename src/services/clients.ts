@@ -1,31 +1,35 @@
-import ClientsModel from "../models/clients"
+import ClientsModel from "../models/clients";
 
 class ClientsService {
-  static getAllClients() {
-    try { ClientsModel.read()
+  static async getAllClients() {
+    try {
+      await ClientsModel.read();
     } catch (error) {
       throw error;
     }
   }
 
-  static create (client) {
-    try { ClientsModel.write("parámetro")
+  static async create(client) {
+    try {
+      await ClientsModel.write("parámetro");
     } catch (error) {
-        throw error;
+      throw error;
     }
   }
 
-  static update (id, data) {
-    try { ClientsModel.write("parámetro")
+  static async update(id, data) {
+    try {
+      await ClientsModel.write("parámetro");
     } catch (error) {
-        throw error;
+      throw error;
     }
   }
 
-  static deleteClient (id) {
-    try { ClientsModel.write("parámetro")
+  static async deleteClient(id) {
+    try {
+      await ClientsModel.write("parámetro");
     } catch (error) {
-        throw error;
+      throw error;
     }
   }
 }
